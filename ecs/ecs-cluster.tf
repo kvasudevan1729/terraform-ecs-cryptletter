@@ -51,7 +51,7 @@ resource "aws_ecs_task_definition" "cryptletter_ecs_task" {
       "logDriver": "awslogs",
       "options": {
          "awslogs-group": "${aws_cloudwatch_log_group.cryptletter_ecs_log_group.id}",
-         "awslogs-region": "${var.aws_region}",
+         "awslogs-region": "${var.cw_aws_region}",
          "awslogs-stream-prefix": "cryptletter-ecs"
       }
     },
@@ -83,7 +83,7 @@ resource "aws_ecs_task_definition" "cryptletter_ecs_task" {
        "logDriver": "awslogs",
        "options": {
           "awslogs-group": "${aws_cloudwatch_log_group.cryptletter_ecs_log_group.id}",
-          "awslogs-region": "${var.aws_region}",
+          "awslogs-region": "${var.cw_aws_region}",
           "awslogs-stream-prefix": "cryptletter-ecs"
         }
     },
