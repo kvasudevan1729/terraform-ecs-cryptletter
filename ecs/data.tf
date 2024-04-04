@@ -3,7 +3,6 @@ data "terraform_remote_state" "cryptletter_ecs_iam" {
   config = {
     bucket = "kv-tf-bucket"
     key    = "tf-ecs-cryptletter-iam"
-    region = var.aws_region
   }
 }
 
@@ -12,7 +11,6 @@ data "terraform_remote_state" "cryptletter_ecs_secret" {
   config = {
     bucket = "kv-tf-bucket"
     key    = "tf-ecs-cryptletter-secret"
-    region = var.aws_region
   }
 }
 

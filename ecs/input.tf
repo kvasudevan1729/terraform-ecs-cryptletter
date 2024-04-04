@@ -18,6 +18,6 @@ variable "cryptletter_cert_domain_name" {
   type = string
 }
 
-variable "aws_region" {
+variable "cw_aws_region" {
   type = string
 }
