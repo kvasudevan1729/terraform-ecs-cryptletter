@@ -21,6 +21,12 @@ set terraform bucket in the `backend.conf`. Initialise
 (`terraform init --backend-config=backend.conf`) and then
 apply (`terraform apply`).
 
+### AWS VPC
+
+If you have an existing VPC, and wish to use that, you can skip this step.
+If you wish to create a VPC, then modify [tfvars](vpc/terraform.tfvars)
+accordingly.
+
 ### AWS IAM
 
 Create the IAM policy for the ecs service to assume task execution role.
