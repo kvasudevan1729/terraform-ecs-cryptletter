@@ -44,4 +44,9 @@ AWS Secrets Manager.
 
 To set up the ecs service, from within the [ecs](ecs) directory,
 ensure `terraform.tfvars` file is correctly populated, and run
-`terraform apply`.
+`terraform apply`. This part of the terraform manifests relies on an
+existing DNS domain, and a corresponding ACM certificate with it.
+For testing purposes, the DNS and cert part can be excluded and to
+access the service just use the external DNS name of the LB. The LB
+is internet facing [lb.tf](ecs/lb.tf) (line 22) but connects to the
+ecs service running in private subnets [ecs-cluster.tf](ecs/ecs-cluster.tf) (line 133).
