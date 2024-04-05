@@ -46,6 +46,11 @@ and the iam profile created for ecs in the [iam](iam) section.
 The ecs iam profile is allowed to retrieve the secret stored in the
 AWS Secrets Manager.
 
+### AWC Certificate
+
+If you wish to create the certificate via ACM, then run apply from [acm](acm)
+directory.
+
 ### AWS ECS
 
 To set up the ecs service, from within the [ecs](ecs) directory,
